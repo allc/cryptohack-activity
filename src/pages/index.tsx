@@ -103,7 +103,7 @@ export default function Home() {
             data={activity}
             theme={{
               dark: ['#161b22', '#39d353'],
-              light: ['#161b22', '#39d353']
+              light: ['#ebedf0', '#216e39']
             }}
             renderBlock={(block, activity) => (
               <MuiTooltip title={`${activity.count} challenges solved on ${activity.date}`}>
