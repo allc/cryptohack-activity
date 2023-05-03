@@ -2,8 +2,8 @@ import ActivityCalendar, { Activity, Level } from 'react-activity-calendar'
 import { Inter } from 'next/font/google'
 import { useEffect, useState } from 'react'
 import { Tooltip as MuiTooltip } from '@mui/material'
-import UsernameForm from '@/components/UsernameForm'
 import { useRouter } from 'next/router'
+import Link from 'next/link'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -89,6 +89,12 @@ export default function Home() {
       <h1>CryptoHack Activity</h1>
       <p>
         <i>Disclaimer: this site is not associated with or endorsed by CryptoHack.</i>
+      </p>
+      <p>
+        Usage: <code>https://www.cjxol.com/cryptohack-activity?user=[your CryptoHack username]</code>
+      </p>
+      <p>
+        <Link href="https://github.com/allc/cryptohack-activity">View on GitHub</Link>
       </p>
       <div>
         {activities.map((activity: Activity[], i: any) => 
