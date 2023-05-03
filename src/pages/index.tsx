@@ -93,7 +93,7 @@ export default function Home() {
         <i>Disclaimer: this site is not associated with or endorsed by CryptoHack.</i>
       </p>
       <p>
-        Usage: <code>https://allc.github.io/cryptohack-activity/?user=[your CryptoHack username]</code>
+        Usage: <code>https://allc.github.io/cryptohack-activity/#user=[your CryptoHack username]</code>
       </p>
       <p>
         <Link href="https://github.com/allc/cryptohack-activity">View on GitHub</Link>
