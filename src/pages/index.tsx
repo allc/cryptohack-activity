@@ -13,7 +13,7 @@ export default function Home() {
 
   useEffect(() => {
     const username = router.query.user
-    if (username == undefined) {
+    if (username == undefined || username == '') {
       return
     }
     fetch(`https://cryptohack.org/api/user/${username}/`)
