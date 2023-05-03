@@ -12,7 +12,9 @@ export default function Home() {
   const router = useRouter()
 
   useEffect(() => {
-    const username = router.query.user
+    const hash = router.asPath.split('#')[1]
+    const parsedHash = new URLSearchParams(hash)
+    const username = parsedHash.get('user')
     if (username == undefined || username == '') {
       return
     }
