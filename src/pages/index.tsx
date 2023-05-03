@@ -101,6 +101,9 @@ export default function Home() {
           <ActivityCalendar
             key={i}
             data={activity}
+            labels={{
+              totalCount: '{{count}} challenges solved in {{year}}',
+            }}
             theme={{
               dark: ['#161b22', '#39d353'],
               light: ['#ebedf0', '#216e39']
