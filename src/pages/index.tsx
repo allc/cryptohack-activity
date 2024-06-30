@@ -7,6 +7,10 @@ import Link from 'next/link'
 
 const inter = Inter({ subsets: ['latin'] })
 
+function get_date_string(date: Date) {
+  return `${date.getFullYear()}-${(date.getMonth() + 1).toString().padStart(2, '0')}-${date.getDate().toString().padStart(2, '0')}`
+}
+
 export default function Home() {
   const [activities, setActivities] = useState<Activity[][]>([])
   const router = useRouter()
@@ -33,10 +37,10 @@ export default function Home() {
             if (year < currentDate.getFullYear()) {
               activities_[year][`${year}-12-31`] = 0
             } else {
-              activities_[year][currentDate.toISOString().split('T')[0]] = 0
+              activities_[year][get_date_string(currentDate)] = 0
             }
           }
-          const key = date.toISOString().split('T')[0]
+          const key = get_date_string(date)
           if (activities_[year][key] == undefined) {
             activities_[year][key] = 0
           }
